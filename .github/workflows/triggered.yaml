@@ -1,9 +1,13 @@
+
 name: "02 - Understanding Events"
 
 on:
   workflow_dispatch:
+
   push:
+
   pull_request:
+
   schedule:
     - cron: "*/5 * * * *"
 
@@ -13,4 +17,4 @@ jobs:
 
     steps:
       - name: Print Trigger Event
-        run: echo "My trigger is ${{ github.event_name git }} event"
+        run: echo "My trigger is ${{ github.event_name }} event"
